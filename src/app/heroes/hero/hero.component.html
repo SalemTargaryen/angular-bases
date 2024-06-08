@@ -1,0 +1,27 @@
+<h1>Spiderman</h1>
+
+<dl>
+  <td>Nombre:</td>
+  <dd>{{nombre}}</dd>
+  <td>Edad:</td>
+  <dd>{{edad}}</dd>
+  <td>Ciudad:</td>
+  <dd>{{nombreciudad}}</dd>
+  <td>País:</td>
+  <dd>Perú</dd>
+  <td>Descripción:</td>
+  <dd>{{getdescripcion()}}</dd>
+</dl>
+
+<button
+  *ngIf="nombre === 'Ryan'"
+class="btn btn-warning mx-3" (click)="cambiarnombre()">Cambiar Nombre</button>
+<button
+*ngIf="edad === 23"
+class="btn btn-primary mx-3" (click)="cambiaredad()">Cambiar Edad</button>
+<button
+*ngIf="nombre !== 'Ryan'"
+ class="btn btn-danger" (click)="resetearnombre()">Restaurar Nombre</button>
+<button
+*ngIf="edad !== 23"
+class="btn btn-danger" (click)="resetearedad()">Restaurar Edad</button>
